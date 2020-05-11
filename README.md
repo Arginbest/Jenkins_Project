@@ -103,7 +103,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 
 
 &nbsp;
- ## Copy _http://your_ip_or_domain:8080_ from the above output
+ # Copy _http://your_ip_or_domain:8080_ from the above output
 
 
 ![Screen Shot 2020-05-10 at 11 11 42 PM](https://user-images.githubusercontent.com/63379120/81530766-201cfe00-9327-11ea-8b4d-212af1e6f4ad.png)
@@ -116,7 +116,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 &nbsp;
 
 
-## **To Set Up Jenkins, please follow the prompts**
+# To Set Up Jenkins, please follow the prompts
 
 ![Screen Shot 2020-05-10 at 11 12 20 PM](https://user-images.githubusercontent.com/63379120/81530793-2f9c4700-9327-11ea-9f47-39221962f8f8.png)
 
@@ -133,7 +133,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 
 &nbsp;
 
-## Jenkins Dashboard
+# Jenkins Dashboard
 
 ![Screen Shot 2020-05-10 at 11 14 22 PM](https://user-images.githubusercontent.com/63379120/81530840-45117100-9327-11ea-9233-c9a03bad5217.png)
 
