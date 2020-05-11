@@ -5,6 +5,31 @@ output "region_name" {
   value = "      ${var.region_name}"
 }
 
+# Output for Instance
+output "owner_name" {
+  value = "     ${var.owner_name}"
+}
+output "image_value" {
+  value = "    ${var.image_value}"
+}
+
+output "instance_type" {
+  value = "  ${aws_instance.jenkins_server.instance_type}"
+}
+
+output "java_version" {
+  value = "   ${var.java_version}"
+}
+
+output "jenkins_version" {
+  value = "${var.jenkins_version}"
+}
+
+output "host" {
+  value = "           http://${aws_instance.jenkins_server.public_ip}:8080"
+}
+
+
 
 # Outputs for VPC
 output "vpc_cidr" {
@@ -36,8 +61,6 @@ output "private_sub3" {
   value = "     ${aws_subnet.private_subnet_cidr3.id}         ${aws_subnet.private_subnet_cidr3.cidr_block}        ${aws_subnet.private_subnet_cidr3.availability_zone}",
 }
 
-
-
 output "gateway_id" {
   value = "${var.ig_cidr_block}"
 }
@@ -46,29 +69,6 @@ output "nat_gateway_id" {
   value = "${var.nat_cidr_block}"
 }
 
-# Output for Instance
-output "owner_name" {
-  value = "     ${var.owner_name}"
-}
-output "image_value" {
-  value = "    ${var.image_value}"
-}
-
-output "instance_type" {
-  value = "  ${aws_instance.jenkins_server.instance_type}"
-}
-
-output "java_version" {
-  value = "   ${var.java_version}"
-}
-
-output "jenkins_version" {
-  value = "${var.jenkins_version}"
-}
-
-output "host" {
-  value = "           http://${aws_instance.jenkins_server.public_ip}:8080"
-}
 
 output "tags" {
   value = "${var.tags}"

@@ -5,6 +5,29 @@ output "region_name" {
   value = "${module.jenkins.region_name}"
 }
 
+# Outputs for Instance
+output "owner_name" {
+  value = "${module.jenkins.owner_name}"
+}
+output "image_value" {
+  value = "${module.jenkins.image_value}"
+}
+output "instance_type" {
+  value = "${module.jenkins.instance_type}"
+}
+output "host" {
+  value = "${module.jenkins.host}"
+}
+
+output "java_version" {
+  value = "${module.jenkins.java_version}"
+}
+
+output "jenkins_version" {
+  value = "${module.jenkins.jenkins_version}"
+}
+
+
 
 # Outputs for VPC
 output "vpc_cidr" {
@@ -37,33 +60,6 @@ output "private_sub3" {
 }
 
 
-
-
 output "tags" {
   value = "${module.jenkins.tags}"
 }
-
-output "image_value" {
-  value = "${module.jenkins.image_value}"
-}
-
-output "owner_name" {
-  value = "${module.jenkins.owner_name}"
-}
-
-output "java_version" {
-  value = "${module.jenkins.java_version}"
-}
-
-output "jenkins_version" {
-  value = "${module.jenkins.jenkins_version}"
-}
-
-output "host" {
-  value = "${module.jenkins.host}"
-}
-
-output "instance_type" {
-  value = "${module.jenkins.instance_type}"
-}
-
