@@ -6,9 +6,10 @@
 
 :black_medium_square: It helps automate the parts of software development related to building, testing, and deploying,
  facilitating continuous integration and continuous delivery.
+ 
+ &nbsp;
 
-
-#### PREREQUISITES:
+### PREREQUISITES:
  
    - **1 VPC**
    - **6 Subnets**
