@@ -18,6 +18,9 @@
    - **Private subnets should have NG attached to it**
    - **Configure route tables**
    
+  &nbsp;
+  
+  
   
    
     
@@ -28,12 +31,10 @@
 ![Screen Shot 2020-05-10 at 11 19 26 PM](https://user-images.githubusercontent.com/63379120/81530456-86ede780-9326-11ea-93d7-1c1e42eccb22.png)
 
  - If everything is successful, you should have proper response &#8593;  :+1:
-
-# **TO INSTALL JENKINS ON EC2 INSTANCE, FOLLOW THE STEPS BELOW :arrow_down:** **OR**
+ 
+ 
 &nbsp;
-
-
-
+# **TO INSTALL JENKINS ON EC2 INSTANCE, FOLLOW THE STEPS BELOW :arrow_down:** **OR**
 ## **Please refer to null_resource.tf for more details**
 
 ```HCL
