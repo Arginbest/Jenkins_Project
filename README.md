@@ -103,7 +103,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 
 
 &nbsp;
-# Copy **http://your_ip_or_domain:8080** from the above output
+ ## Copy _http://your_ip_or_domain:8080_ from the above output
 
 
 ![Screen Shot 2020-05-10 at 11 11 42 PM](https://user-images.githubusercontent.com/63379120/81530766-201cfe00-9327-11ea-8b4d-212af1e6f4ad.png)
