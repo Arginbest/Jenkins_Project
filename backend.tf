@@ -1,11 +1,7 @@
-terraform {
-  required_version = "0.11.14"
-
-  backend "s3" {
-    bucket = "ohio-state-bucket-nataliya"
-    key    = "projects/us-east-2/tools/vpc-jenkins/terraform.tfstate"
-
-    # dynamodb_table = "state_bucket"
-    region = "us-east-2"
-  }
-}
+terraform { 
+backend "s3" { 
+bucket = "jenkins-nataliya-dev" 
+key = "vet/us-east-2/sharedtools/dev/jenkins.tfstate" 
+region = "us-east-2" 
+  } 
+} 

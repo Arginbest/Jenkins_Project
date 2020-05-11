@@ -8,7 +8,7 @@
  facilitating continuous integration and continuous delivery.
 
 
-### PREREQUISITES:
+#### PREREQUISITES:
  
    - **1 VPC**
    - **6 Subnets**
@@ -21,15 +21,16 @@
   
    
     
-  #### - To check if everything is configured properly, create ec2 instance, manually,  on public subnet and ping www.google.com
+  **To check if everything is configured properly, create ec2 instance, manually,  on public subnet and ping
+  www.google.com.**
   
 
 
-![Screen Shot 2020-05-10 at 11 19 26 PM](https://user-images.githubusercontent.com/63379120/81523845-bd226b80-9314-11ea-9253-881e71f2bd91.png)
+<img width="909" alt="ec2 pings google" src="https://user-images.githubusercontent.com/63379120/81093957-7376f280-8ec8-11ea-8f8c-83c056387234.png">
 
-  - **If everything is successful, you should have proper response** &#8593;  :+1:
+ - If everything is successful, you should have proper response &#8593;  :+1:
 
-## TO INSTALL JENKINS ON EC2 INSTANCE, FOLLOW THE STEPS BELOW :arrow_down: **OR**
+**TO INSTALL JENKINS ON EC2 INSTANCE, FOLLOW THE STEPS BELOW :arrow_down:** **OR**
 &nbsp;
 
 
@@ -55,7 +56,7 @@ provisioner "remote-exec" {
  **1. Jenkins is a Java application, so the first step is to install Java.**
  
  ```HCL
- "sudo yum install java${var.java_version} -y",
+ "sudo yum install java-1.8.0-openjdk-devel -y",
 ```
 
 **2. The next step is to enable the Jenkins repository.**
@@ -70,7 +71,7 @@ provisioner "remote-exec" {
 
 **4. Once the repository is enabled, install the latest stable version of Jenkins.**
   ```HCL
-"sudo yum install ${var.jenkins_version} -y",
+"sudo yum install jenkins -y",
 ```
 
 **5. After the installation process is completed, start the Jenkins service.**
@@ -94,17 +95,17 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 
 
 
-# terraform apply -var-file configurations/jenkins.tfvars
+# terraform apply -var-file jenkins.tfvars
 
-![Screen Shot 2020-05-10 at 11 01 27 PM](https://user-images.githubusercontent.com/63379120/81523115-73d11c80-9312-11ea-8a57-771e57e41fd6.png)
+<img width="1236" alt="Screen Shot 2020-05-04 at 9 09 21 PM" src="https://user-images.githubusercontent.com/63379120/81095609-dff2f100-8eca-11ea-9108-137354b6481f.png">
 
 
 
 &nbsp;
-# Copy **http://your_ip_or_domain:8080** from the above output
+# http://your_ip_or_domain:8080
 
 
-![Screen Shot 2020-05-10 at 11 11 42 PM](https://user-images.githubusercontent.com/63379120/81523645-0e7e2b00-9314-11ea-96aa-a60d2b280a79.png)
+<img width="999" alt="Screen Shot 2020-05-05 at 1 56 26 PM" src="https://user-images.githubusercontent.com/63379120/81105515-ac6b9300-8ed9-11ea-98ef-5b4bf2a8dcf2.png">
 
 
 
@@ -116,13 +117,13 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 
 # **To Set Up Jenkins, please follow the prompts**
 
-![Screen Shot 2020-05-10 at 11 12 20 PM](https://user-images.githubusercontent.com/63379120/81523684-41282380-9314-11ea-9853-c18883e029f3.png)
+<img width="1009" alt="Screen Shot 2020-05-05 at 1 57 56 PM" src="https://user-images.githubusercontent.com/63379120/81105404-77f7d700-8ed9-11ea-9fcc-38d1c0366a48.png">
 
-![Screen Shot 2020-05-10 at 11 13 07 PM](https://user-images.githubusercontent.com/63379120/81523708-51400300-9314-11ea-8c6c-a3cb2ba1f22e.png)
+<img width="1009" alt="Screen Shot 2020-05-05 at 1 57 56 PM" src="https://user-images.githubusercontent.com/63379120/81105728-f8b6d300-8ed9-11ea-8d2d-f0d6be454f3b.png">
 
-![Screen Shot 2020-05-10 at 11 14 01 PM](https://user-images.githubusercontent.com/63379120/81523731-60bf4c00-9314-11ea-8b60-cd7a7c2b7a22.png)
+<img width="999" alt="Screen Shot 2020-05-05 at 1 59 20 PM" src="https://user-images.githubusercontent.com/63379120/81105776-0bc9a300-8eda-11ea-9c6d-2ca23ba984e1.png">
 
-![Screen Shot 2020-05-10 at 11 14 12 PM](https://user-images.githubusercontent.com/63379120/81523756-6fa5fe80-9314-11ea-8622-7a0883b293e9.png)
+<img width="1007" alt="Screen Shot 2020-05-05 at 2 03 00 PM" src="https://user-images.githubusercontent.com/63379120/81105794-17b56500-8eda-11ea-97ac-8a2d95fb0eb2.png">
 
 
 
@@ -133,8 +134,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword`$(tput sgr0)",
 
 # Jenkins Dashboard
 
-![Screen Shot 2020-05-10 at 11 14 22 PM](https://user-images.githubusercontent.com/63379120/81523775-7c2a5700-9314-11ea-9862-41060e62fae0.png)
-
+<img width="1040" alt="Screen Shot 2020-05-05 at 2 03 49 PM" src="https://user-images.githubusercontent.com/63379120/81105848-39165100-8eda-11ea-8a5a-9dfa221b3ece.png">
 
 &nbsp;
 

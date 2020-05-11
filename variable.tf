@@ -1,5 +1,8 @@
 # Translation
 variable "region" {}
+variable "host" {}
+variable "availability_zone" {}
+
 variable "image_value" {}
 
 variable "owner_name" {}
@@ -32,10 +35,6 @@ variable "instance_type" {}
 variable "key_name" {}
 
 variable "ingress_cidr_blocks" {
-  type = "list"
-}
-
-variable "egress_cidr_blocks" {
   type = "list"
 }
 

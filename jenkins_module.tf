@@ -8,10 +8,12 @@ region_name              = "${var.region_name}"
 image_value              = "${var.image_value}"
 owner_name               = "${var.owner_name}"
 user                     = "${var.user}"
+host                     = "aws_instance.jenkins_server.public_ip"
 
 az1                      = "${var.az1}"
 az2                      = "${var.az2}"
 az3                      = "${var.az3}"  
+
 
 vpc_cidr                 = "${var.vpc_cidr}"
 
@@ -35,7 +37,6 @@ instance_type           = "${var.instance_type}"
 key_name                = "${var.key_name}"
 
 ingress_cidr_blocks     = "${var.ingress_cidr_blocks}"
-egress_cidr_blocks      = "${var.egress_cidr_blocks}"
 
 java_version            = "${var.java_version}"
 jenkins_version         = "${var.jenkins_version}"
