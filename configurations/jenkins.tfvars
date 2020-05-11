@@ -1,19 +1,16 @@
 # Values
-environment = "dev" 
-s3_bucket = "jenkins-nataliya-dev" #Will be used to set backend.tf 
+environment       = "dev" 
+s3_bucket         = "jenkins-nataliya-dev" #Will be used to set backend.tf 
 s3_folder_project = "vet" #Will be used to set backend.tf 
-s3_folder_region = "us-east-2" #Will be used to set backend.tf 
-s3_folder_type = "sharedtools" #Will be used to set backend.tf 
-s3_tfstate_file = "jenkins.tfstate" #Will be used to set backend.tf 
+s3_folder_region  = "us-east-2" #Will be used to set backend.tf 
+s3_folder_type    = "sharedtools" #Will be used to set backend.tf 
+s3_tfstate_file   = "jenkins.tfstate" #Will be used to set backend.tf 
 
-host                     = "${aws_instance.jenkins_server.public_ip}"
+
 
 region                   = "us-east-2"
 region_name              = "ohio"
 
-image_value              = "amzn2-ami-hvm-2.0.20200406.0-x86_64-ebs*"
-owner_name               = "amazon"
-user                     = "ec2-user"
 
 vpc_cidr                 = "192.168.0.0/16"
 
@@ -32,15 +29,24 @@ az1                      = "a"
 az2                      = "b"
 az3                      = "c"
 
-availability_zone            = "${var.region}${var.az1}"
-
 # IG and NAT routes
 nat_cidr_block           = "0.0.0.0/0"
 ig_cidr_block            = "0.0.0.0/0"
 
 # ec2 instances
+image_value              = "amzn2-ami-hvm-2.0.20200406.0-x86_64-ebs*"
+owner_name               = "amazon"
 instance_type            = "t2.medium"
 key_name                 = "nataliyas_jenkins_project_tf"
+
+
+# null_resource.tf
+
+
+user                     = "ec2-user"
+host                     = "${aws_instance.jenkins_server.public_ip}"
+java_version             = "-1.8.0-openjdk-devel"
+jenkins_version          = "jenkins"
 
 # security group
 ingress_cidr_blocks      = ["0.0.0.0/0"]
@@ -54,7 +60,4 @@ tags = {
     Created_by           = "Nataliya Andrukhiv"
 }
 
-# null_resource.tf inline 
 
-java_version            = "-1.8.0-openjdk-devel"
-jenkins_version         = "jenkins"
